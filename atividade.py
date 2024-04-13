@@ -93,3 +93,6 @@ coeficiente_variacao = coefficientOfVariation(l)
 print (f"Variancia: {variancia}")
 print(f"Desvio padrão: {desvio_padrao}")
 print(f"Coeficiente de variação: {coeficiente_variacao:.2f}%")
+
+result = varianceListTwo(classe, fi)
+print(result)
