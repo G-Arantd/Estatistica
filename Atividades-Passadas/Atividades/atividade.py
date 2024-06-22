@@ -24,6 +24,7 @@ def countItemsInList(l):
         else:
             count_number[number] = 1
 
+    print(count_number)
     return count_number
 
 def varianceList(l):
@@ -36,6 +37,8 @@ def varianceList(l):
 
     for num in qtd_l.keys():
         
+        print(f"(qtd lista: {qtd_l.get(num)}*((number: {num} -media: {aven})**number: {2}))")
+        print(((num-aven)**2),"\n")
         list_result.append(qtd_l.get(num)*((num-aven)**2))
         
     sum_list = sum(list_result)
@@ -61,8 +64,6 @@ def varianceListTwo(l_c, fi):
     
     return result
         
-        
-
 def standardDeviation(l):
     
     v = varianceList(l)
@@ -73,8 +74,6 @@ def coefficientOfVariation(l):
     
     std = standardDeviation(l)
     mean = average(l)
-    
-    print(mean)
     
     if mean == 0:
         return "Divisão por zero!"
@@ -93,6 +92,3 @@ coeficiente_variacao = coefficientOfVariation(l)
 print (f"Variancia: {variancia}")
 print(f"Desvio padrão: {desvio_padrao}")
 print(f"Coeficiente de variação: {coeficiente_variacao:.2f}%")
-
-result = varianceListTwo(classe, fi)
-print(result)
